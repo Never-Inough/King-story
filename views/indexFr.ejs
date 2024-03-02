@@ -1,0 +1,21 @@
+<!-- Step 3 Add Header -->
+<%- include("partials/header.ejs") %>
+<h1 id="titre">Poésie à 2 francs rimés</h1>
+
+  
+    <% if (locals.adjective && locals.adjective2 && locals.adjective3 && locals.adjective4 && locals.adjective5 && locals.adjective6 && locals.adjective7 && locals.noun && locals.noun2 && locals.noun3 && locals.superlative && locals.superlative2 && locals.superlative3 && locals.masculineName && locals.masculineName2 && locals.masculineName3 && locals.feminineName && locals.feminineName2 && locals.feminineName3) {%>
+      
+<!-- da se smeni celia text s neshto adekvatno.-->
+
+      <h2>Once upon a time there was a <span style="color:green;"><%= adjective %></span> and <span style="color:green;"><%= adjective2 %></span> french team. They were sent to work at home in a quite <span style="color:green;"><%= adjective3 %></span> conditions.<br>
+       For unknown reason, people called them <span style="color:green;"><%= masculineName %></span> <span style="color:green;"><%= superlative %></span>.<br> He had two daughters: <span style="color:green;"><%= feminineName %> <%= superlative2 %></span> and <span style="color:green;"><%= feminineName2 %> <%= superlative3 %></span>. <span style="color:green;"><%= feminineName %></span> was invited to a <span style="color:green;"><%= adjective4 %></span> festivities,<br> but <span style="color:green;"><%= feminineName2 %></span> prefered taking care of her <span style="color:green;"><%= adjective5 %></span> horse<br> and avoid exposing herself to the <span style="color:green;"><%= adjective6 %></span> and <span style="color:green;"><%= adjective7 %></span> people and their <span style="color:green;"><%= noun %></span>.</h2>  
+  
+    <% } else { %> 
+    <h1>Do you want to read the story of a King 🤴 and his daughters 👸 ?</h1>
+    <% } %>
+
+<form action="/submit" method="POST">
+  <input type="submit" value="Check it yourself!">
+</form>
+
+<%- include("partials/footer.ejs") %>
